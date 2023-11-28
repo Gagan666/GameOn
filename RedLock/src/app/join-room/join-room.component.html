@@ -1,0 +1,21 @@
+<app-home-nav-bar></app-home-nav-bar>
+<div class="join-room">
+    <h2>Available Rooms</h2>
+    <div class="filter-bar">
+      <input type="text" placeholder="Search by game or location" [(ngModel)]="searchQuery" (input)="filterRooms()">
+    </div>
+    <div class="room-center">
+    <ul class="room-list">
+      <li *ngFor="let room of filteredRooms" class="room-item">
+        <h3>{{ room.gameName }}</h3>
+        <p>Location: {{ room.location }}</p>
+        <p>Players Needed: {{ room.playersNeeded }}</p>
+        <button class="join-button" (click)="joinRoom(room._id)">
+          <span>Join</span>
+        </button>
+      </li>
+      
+    </ul>
+</div>
+  </div>
+  

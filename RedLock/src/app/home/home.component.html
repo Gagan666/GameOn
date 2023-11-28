@@ -1,0 +1,21 @@
+<app-home-nav-bar></app-home-nav-bar>
+
+<div class="content">
+  <div class="centered-container">
+    <div class="room-card">
+      <div class="card-title">Create or Join a Room</div>
+      <div class="card-content">
+        <p>Would you like to create a new room or join an existing one?</p>
+        <button class="create-room-button" (click)="showCreateRoom = true" (click)="showJoinRoom=false">Create a New Room</button>
+        <button class="join-room-button" (click)="navigateToJoinRoom()">Join an Existing Room</button>
+      </div>
+      <div *ngIf="showCreateRoom">
+        <app-create-new-room></app-create-new-room>
+      </div>
+    </div>
+    
+
+
+
+  </div>
+</div>

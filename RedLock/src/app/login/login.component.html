@@ -1,0 +1,24 @@
+
+<div class="login-box">
+    <h2>Login</h2>
+    <p style="color: crimson;">{{ loginMsg }}</p>
+    <form #loginForm="ngForm" (ngSubmit)="onLogin()">
+      <div class="user-box">
+        <input type="text" name="username" [(ngModel)]="username" required>
+        <label>Username</label>
+      </div>
+      <div class="user-box">
+        <input type="password" name="password" [(ngModel)]="password" required>
+        <label>Password</label>
+      </div>
+      <a id="ask" href="/registration"><h5>Not Registered?</h5></a>
+
+      <a (click)="loginForm.ngSubmit.emit()">
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+      Submit
+      </a>
+    </form>
+  </div>

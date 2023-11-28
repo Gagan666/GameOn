@@ -1,0 +1,54 @@
+.join-room {
+    text-align: center; /* Center the content */
+    padding: 20px;
+  }
+  
+  .room-list {
+    list-style: none; /* Remove bullet points */
+    padding: 0;
+  }
+  
+  .room-center {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    /* width: 80%; */
+    margin: 0 auto; /* Center the .room-center div horizontally */
+  }
+  
+  .room-item {
+    margin: 10px;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    background-color: #f9f9f9;
+  }
+  
+  .join-button {
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    padding: 10px 20px;
+    cursor: pointer;
+  }
+  
+  .join-button:hover {
+    background-color: #45a049;
+  }
+  
+  .filter-bar {
+    margin-bottom: 20px;
+  }
+  
+  .filter-bar input[type="text"] {
+    width: 50%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+  }
+  
+  .filter-bar input[type="text"]::placeholder {
+    font-style: italic;
+  }
+  

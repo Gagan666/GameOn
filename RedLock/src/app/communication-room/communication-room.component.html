@@ -1,0 +1,29 @@
+<div class="communication-room">
+  <h2>Chat Room</h2>
+  <div *ngIf="isAdminRole(); else playerActions">
+    <button class="dismantle-button" (click)="exitRoom()">Dismantle Room</button>
+  </div>
+  <ng-template #playerActions>
+    <button class="exit-button" (click)="exitRoom()">Exit Room</button>
+  </ng-template>
+  <div class="chat-container">
+    <div class="chat-messages">
+      <div *ngFor="let msg of messages" class="message" [ngClass]="{ 'user-message': msg.sender === currentUser }">
+        <div class="message-content">
+          <div class="message-header">
+            {{ msg.sender }}
+            <span class="message-timestamp">{{ formatDate(msg.timestamp) }}</span>
+          </div>
+          <div class="message-body">
+            {{ msg.content }}
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="message-input">
+      <input type="text" [(ngModel)]="message" (keyup.enter)="sendMessage()" placeholder="Type your message" />
+      <button (click)="sendMessage()">Send</button>
+    </div>
+    
+  </div>
+</div>

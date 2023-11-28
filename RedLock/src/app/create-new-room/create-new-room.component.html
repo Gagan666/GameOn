@@ -1,0 +1,22 @@
+<!-- Existing content... -->
+
+<div class="create-room-form">
+    
+    <h2>Create a New Room</h2>
+    <form (submit)="createRoom()">
+      <div class="form-group">
+        <label for="gameName">Game Name:</label>
+        <input type="text" id="gameName" name="gameName" [(ngModel)]="newRoom.gameName" required>
+      </div>
+      <div class="form-group">
+        <label for="location">Location:</label>
+        <input type="text" id="location" name="location" [(ngModel)]="newRoom.location" required>
+      </div>
+      <div class="form-group">
+        <label for="playersNeeded">Number of Players Needed:</label>
+        <input type="number" id="playersNeeded" name="playersNeeded" [(ngModel)]="newRoom.playersNeeded" required>
+      </div>
+      <button type="submit">Create Room</button>
+    </form>
+  </div>
+  
